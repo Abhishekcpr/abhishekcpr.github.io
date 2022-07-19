@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       body{
+           background-color: #1d2a35;
+       }
+       .h1 {
+    font-family: 'Koulen', cursive;
+    color: white;
+    font-size: 41px;
+    margin-left: 600px;
+}
+
+       .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .btn:hover {
+        background-color: RoyalBlue;
+      } 
+      
+
+
+      .slide{
+        /* border-radius: 5px; */
+        border : 3px solid gold ;
+        height: 368px;
+        width: 584px;
+        margin: auto;
+        padding:20px;
+        display: flex;
+        border-radius: 5px;
+
+      }
+
+      img{
+        border-radius: 15px;
+        margin : 10px 20px 20px ;
+        height: 340px;
+        width : 500px;
+      }
+      /* #img1{
+        visibility: visible;
+      } */
+
+      .stat{
+        /* border:3px solid white ; */
+         margin:auto ;
+         width:584px;
+         padding:auto ;
+
+      }
+      .arrow{
+        font-size: 60px;
+        color: white;
+        /* border : 2px solid white; */
+        height : 70px;
+        margin-top: 120px;
+      }
+
+      .arrow:hover{
+        opacity: 0.5;
+      }
+      #proname,#status,#lang{
+        font-family: 'Koulen', cursive;
+        color : white;
+        font-size: 30px;
+        margin:auto ;
+        padding-left : 204px
+      }
+
+      #proname:hover{
+        color:red ;
+      }
+
+      
+    </style>
+</head>
+<body>
+    <div class="home">
+        <a href="index.html"> <button class="btn"><i class="fa fa-home"></i></button></a>
+        <span class="h1">PROJECTS</span>
+     </div> 
+
+     
+     <div class="slide">
+      <div id="left" class="arrow">
+        <i class="fa fa-angle-left"></i>
+      </div>
+      <img src="pro1.png" id="img" alt="">
+      <!-- <img src="js.png" id="img2" alt=""> -->
+      <!-- <img src="" alt=""> -->
+      <div id="right" class="arrow">
+        <i class="fa fa-angle-right"></i>
+
+      </div>
+     
+     </div>
+
+     <div class="stat">
+      <p id="proname">KBC Quiz</p>
+      <p id="lang">(HTML,CSS and JS)</p>
+      <!-- <p id="status">Under Progress</p> -->
+    </div>
+     <script>
+       var index = 0 ;
+      //  update number of projects here 
+       var numOfImages = 4;
+       pname = document.getElementById("proname");
+       lang = document.getElementById("lang");
+       status = document.getElementById("status");
+       var left = document.getElementById("left").addEventListener("click",function()
+       {
+          if(index>0)
+          {
+            index = index - 1;
+            changeImage(index);
+          }
+           
+       })
+       var right = document.getElementById("right").addEventListener("click",function()
+       {
+        //  if(index<numOfImages)
+        //  {
+        //    index = index+1 ;
+        //    changeImage(index);
+        //  }
+
+          index = index+ 1;
+          changeImage(index);
+       })
+
+       function changeImage(value)
+       {
+         value = value%numOfImages;
+          switch(value)
+          {
+            case 0 : document.getElementById("img").src="pro1.png"; 
+                   pname.innerText="KBC Quiz"
+                   lang.innerText="(HTML,CSS and JS)"
+                   status.innerHTML = "Under Progress";
+                   pname.addEventListener("click",function()
+                   {
+                     location.href="https://abhishekkbc.netlify.app/";
+                   })
+            break ;
+            case 1 : document.getElementById("img").src="pro2.png"; 
+            pname.innerText="Tic Tac Toe";
+            lang.innerText="(HTML,CSS and JS)";
+                   status.innerHTML ="";
+                   pname.addEventListener("click",function()
+                   {
+                     location.href="https://abhishekxo.netlify.app";
+                   })
+            break ;
+
+            case 2 : document.getElementById("img").src="blaster.png"; 
+            pname.innerText="Blaster Game";
+            lang.innerText="(Turbo C++)"
+                   status.innerText ="";
+                   pname.addEventListener("click",function()
+                   {
+                     location.href="https://www.youtube.com/watch?v=uUcjSEu78Eo";
+                   })
+            break ;
+
+            case 3 : document.getElementById("img").src="benzen.png"; 
+            lang.innerText="(Turbo C++)"
+            pname.innerText="Delocalization of pi bond";
+                   status.innerText ="";
+                   pname.addEventListener("click",function()
+                   {
+                     location.href="https://www.youtube.com/watch?v=suVKSBdGy8k";
+                   })
+            break ;
+            default : break ;
+          }
+       }
+     </script>
+</body>
+</html>

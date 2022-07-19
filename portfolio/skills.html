@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+           background-color: #1d2a35;
+          
+        }
+
+        .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .btn:hover {
+        background-color: RoyalBlue;
+      } 
+
+      .h1 {
+    font-size: 40px;
+    color: white;
+    font-family: 'Koulen', cursive;
+    display: inline-block;
+    margin-left: 614px;
+}
+
+    .skill{
+        display: flex;
+        margin-top : 30px ;
+        justify-content: space-around;
+        align-items: flex-start;
+        /* justify-content: space-around; */
+    }
+
+    .icons {
+    border: 3px solid white;
+    width: 545px;
+    height: 500px;
+    align-items: flex-start;
+    border-radius: 5px;
+    
+}
+     img {
+    border-radius: 10px;
+    height: 150px;
+    width: 197px;
+    margin: 33px;
+}
+
+ #HTML, #CSS, #JS, #CPP{
+    font-size: 30px;
+    color: white;
+    margin : 23px ;
+ }
+ .level{
+     border:2px solid white;
+     
+      color: white;
+      height : 500px ;
+      width :600px ;
+      padding : 5px ;
+      border-radius: 5px;
+      
+ }
+
+ .content{
+    width: 500px ;
+   
+    border-radius: 5px;
+    border : 2px solid green;
+    height : 15px;
+
+
+}
+ #html , #css , #js , #cpp{
+     background-color: green;
+     border-radius: 5px;
+     height: 14px;
+     width: 2px ;
+ }
+ 
+ 
+    </style>
+</head>
+<body>
+
+    <div class="home">
+        <a href="index.html"> <button class="btn"><i class="fa fa-home"></i></button></a>
+        <span class="h1">My Skills</span>
+     </div>
+   
+    <div class="skill">
+        <div class="icons">
+            <img src="html.png"   alt="html icon">
+            <img src="css.png"  alt="css ">
+            <img src="js.png"  alt="js">
+            <img src="cpp.webp"  alt="cpp">
+        </div>
+
+        <div class="level">
+            <div id="HTML">
+                HTML:  <span id="h">0</span>
+            </div>
+            <div class="content">
+                <div id="html"></div>
+            </div>
+
+
+            <div id="CSS">
+               CSS: <span id="c">0</span>
+            </div>
+            <div class="content">
+                <div id="css"></div>
+            </div>
+
+
+            <div id="JS">
+                Javascript: <span id="j">0</span>
+            </div>
+            <div class="content">
+                <div id="js"></div>
+            </div>
+
+
+            <div id="CPP">
+                C++: <span id="cp">0</span>
+            </div>
+            <div class="content">
+                <div id="cpp"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+    <script>
+    var wid = 0 ;
+    var str ;
+    var maxwidth =[400,300, 225,250,500];
+
+
+        
+        var value = setInterval(() => {
+          if(wid<=maxwidth[4])
+          {
+            if(wid<=maxwidth[0])
+            {
+             mw  = wid.toString() + "px" ;
+             str = parseInt( (wid/5)).toString() + " %"
+             document.getElementById("h").innerText = str ;
+             document.getElementById("html").style.width = mw ;
+     
+             }
+
+             if(wid<=maxwidth[1])
+            {
+             mw  = wid.toString() + "px" ;
+             str = parseInt( (wid/5)).toString() + " %"
+             document.getElementById("c").innerText = str ;
+             document.getElementById("css").style.width = mw ;
+     
+             }
+
+             if(wid<=maxwidth[2])
+            {
+             mw  = wid.toString() + "px" ;
+             str =  parseInt((wid/5)).toString() + " %"
+             document.getElementById("j").innerText = str ;
+             document.getElementById("js").style.width = mw ;
+     
+             }
+
+             if(wid<=maxwidth[3])
+            {
+             mw  = wid.toString() + "px" ;
+             str =  parseInt((wid/5)).toString() + " %"
+             document.getElementById("cp").innerText = str ;
+             document.getElementById("cpp").style.width = mw ;
+     
+             }
+
+            wid++ ;
+          }
+   
+
+       else{
+           clearInterval(value) ;
+       }
+   
+    }, 10);
+
+    setTimeout(() => {
+        value();
+    }, 1000);
+    
+
+    </script>
+</body>
+</html>

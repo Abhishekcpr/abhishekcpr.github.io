@@ -1,0 +1,165 @@
+body{
+        background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    /* navigation bar  */
+.bar{
+    background-color: black;
+    width:300px;
+    height: 800px ;
+    border: 3px solid white;
+    font-size: 20px;
+  
+}
+.content {
+    
+    display: flex ;
+    align-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+a:hover{
+  color: red ;
+}
+
+li {
+    margin: 13px;
+   
+    width: 71px;
+    padding: 5px;
+    margin-left: 54px;
+}
+
+/* back arrow button  */
+#backarrow{
+  height : 30px ;
+  width : 30px ;
+  border-radius : 2px ;
+ background-color: black;
+  margin-left : 250px ;
+  margin-top: 20px;
+  visibility: hidden ;
+}
+#backbutton {
+  height : 30px;
+  width: 30px ;
+  border-radius: 22px;
+}
+.name{
+ font-size: 25px;
+ color: white ;
+ margin-left : 62px;
+}
+#profile {
+  height: 269px;
+  width: 222px;
+  border-radius: 143px;
+  margin-top: 28px;
+  margin-left: 34px;
+  margin-right: 13px;
+  border: 5px solid rgba(128, 128, 128, 0.673);
+}
+
+ ul{
+   list-style-type: none;
+ }
+.hi{
+ color: white ;
+ font-size: 30px;
+ /* margin-left: 200px; */
+}
+
+.info {
+    /* border: 5px solid white; */
+    margin-left: 300px;
+    margin-top: 225px;
+    width : 900px;
+    
+    
+}
+
+.font{
+  font-family: 'Koulen', cursive;
+}
+.myname{
+    color: white ;
+    font-size : 60px;
+    margin-top: 15px;
+}
+
+ #prof{
+    color: red ;
+    font-size: 60px;
+  }
+
+ 
+  #resume {
+    border: 2px solid red;
+    color: red;
+    font-size: 31px;
+    width: 110px;
+    height: 43px;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 5px ;
+}
+
+  #resume:hover{
+    background-color: red;
+    color: white;
+  }
+
+  /* social media buttons  */
+ 
+  .fa {
+    padding: 17px;
+    /* padding-left: 5px; */
+    font-size: 29px;
+    width: 17px;
+    height: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 31px 1px 0px 9px;
+    border-radius: 50%;
+}
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .social{
+    margin-top: -14px;
+    /* border: 2px solid white ; */
+    padding-top: 5px;
+    height : 50px;
+  }
+
+  /* styling the navbar icons  */
+  .fas{
+    color : white ;
+    /* background-color: white; */
+  }
